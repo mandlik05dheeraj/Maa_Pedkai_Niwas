@@ -125,12 +125,12 @@
         <main id="dashboard" class="p-4 sm:p-10 page">
             <h2 class="text-3xl font-bold mb-8 heading-font">Current Renters</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-card rounded-lg p-6" data-renter-name="John Doe" data-renter-address="123 Tech Park, Bangalore" data-aadhaar-link="">
+                <div class="glass-card rounded-lg p-6" data-renter-name="Rohit B. Pawar" data-renter-address="123 Tech Park, Bangalore" data-aadhaar-link="">
                     <h3 class="text-xl font-bold text-cyan-400 mb-4 heading-font">Room A</h3>
                     <div class="space-y-3 text-gray-300">
-                        <p><strong>Name:</strong> John Doe</p>
-                        <p><strong>Phone:</strong> +91 98765 43210</p>
-                        <p><strong>Address:</strong> 123 Tech Park, Bangalore</p>
+                        <p><strong>Name:</strong> Rohit B. Pawar</p>
+                        <p><strong>Phone:</strong> +91 96237 27612</p>
+                        <p><strong>Address:</strong> -, Maharashtra</p>
                         <!-- <p><strong>Members:</strong> 2</p> -->
                     </div>
                     <div class="mt-6 space-y-2">
@@ -143,8 +143,8 @@
                     <h3 class="text-xl font-bold text-lime-400 mb-4 heading-font">Room B</h3>
                     <div class="space-y-3 text-gray-300">
                         <p><strong>Name:</strong> Soham Parihar</p>
-                        <p><strong>Phone:</strong> +91 -</p>
-                        <p><strong>Address:</strong> -</p>
+                        <p><strong>Phone:</strong> +91 95165 23700</p>
+                        <p><strong>Address:</strong> M.P.</p>
                         <!-- <p><strong>Members:</strong> 1</p> -->
                     </div>
                     <div class="mt-6 space-y-2">
@@ -153,12 +153,12 @@
                         <button class="btn btn-gray">  Members: 1 </button>
                     </div>
                 </div>
-                <div class="glass-card rounded-lg p-6" data-renter-name="Alex Johnson" data-renter-address="789 Future Towers, Pune" data-aadhaar-link="">
+                <div class="glass-card rounded-lg p-6" data-renter-name="Ajit Kawde" data-renter-address="789 Future Towers, Pune" data-aadhaar-link="">
                     <h3 class="text-xl font-bold text-fuchsia-400 mb-4 heading-font">Room G</h3>
                     <div class="space-y-3 text-gray-300">
-                        <p><strong>Name:</strong> Alex Johnson</p>
-                        <p><strong>Phone:</strong> +91 76543 21098</p>
-                        <p><strong>Address:</strong> 789 Future Towers, Pune</p>
+                        <p><strong>Name:</strong> Ajit Kawde</p>
+                        <p><strong>Phone:</strong> +91 62614 19462</p>
+                        <p><strong>Address:</strong> M.P.</p>
                         <!-- <p><strog>Members:</strog> 3</p> -->
                     </div>
                     <div class="mt-6 space-y-2">
@@ -306,67 +306,6 @@
         </main>
     </div>
 
-    <!-- Modals -->
-    <div id="agreementModal" class="fixed inset-0 z-50 items-center justify-center hidden modal-backdrop">
-        <div class="glass-card rounded-lg shadow-lg w-full max-w-md mx-4 p-6 sm:p-8">
-            <h3 class="text-2xl font-bold mb-4 heading-font">Generate Rent Agreement</h3>
-            <div id="agreementForm">
-                <div class="mb-4">
-                    <label for="startDate" class="block text-sm font-medium text-gray-300">Start Date</label>
-                    <input type="date" id="startDate" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-2">
-                </div>
-                <div class="mb-6">
-                    <label for="endDate" class="block text-sm font-medium text-gray-300">End Date</label>
-                    <input type="date" id="endDate" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-2">
-                </div>
-                <div class="flex justify-end space-x-4">
-                    <button type="button" class="btn btn-gray" onclick="closeModal('agreementModal')">Cancel</button>
-                    <button type="button" class="btn btn-indigo" onclick="generateAgreement()">Generate</button>
-                </div>
-            </div>
-            <div id="agreementResult" class="hidden">
-                <div id="loading" class="text-center">
-                    <p>Generating your agreement...</p>
-                    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto mt-4"></div>
-                </div>
-                <div id="agreementTextContainer" class="hidden">
-                    <h4 class="text-xl font-bold mb-4 heading-font">Generated Agreement</h4>
-                    <textarea id="agreementText" readonly class="w-full h-48 sm:h-64 bg-gray-800 text-gray-300 p-2 rounded-md border border-gray-600"></textarea>
-                    <div class="flex justify-end space-x-4 mt-4">
-                         <button type="button" class="btn btn-gray" onclick="closeModal('agreementModal')">Close</button>
-                         <button type="button" class="btn btn-indigo" onclick="copyToClipboard('agreementText')">Copy Text</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="reminderModal" class="fixed inset-0 z-50 items-center justify-center hidden modal-backdrop">
-        <div class="glass-card rounded-lg shadow-lg w-full max-w-md mx-4 p-6 sm:p-8">
-            <h3 class="text-2xl font-bold mb-4 heading-font">Send Rent Reminder</h3>
-            <div id="reminderForm">
-                 <p class="mb-4 text-gray-300">A friendly rent reminder will be drafted for <strong id="reminderRenterName"></strong>.</p>
-                 <div class="flex justify-end space-x-4">
-                    <button type="button" class="btn btn-gray" onclick="closeModal('reminderModal')">Cancel</button>
-                    <button type="button" class="btn btn-indigo" onclick="generateReminder()">Draft Reminder</button>
-                </div>
-            </div>
-             <div id="reminderResult" class="hidden">
-                <div id="reminderLoading" class="text-center">
-                    <p>Drafting reminder...</p>
-                    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto mt-4"></div>
-                </div>
-                <div id="reminderTextContainer" class="hidden">
-                    <h4 class="text-xl font-bold mb-4 heading-font">Drafted Reminder</h4>
-                    <textarea id="reminderText" class="w-full h-48 bg-gray-800 text-gray-300 p-2 rounded-md border border-gray-600"></textarea>
-                    <div class="flex justify-end space-x-4 mt-4">
-                         <button type="button" class="btn btn-gray" onclick="closeModal('reminderModal')">Close</button>
-                         <button type="button" class="btn btn-indigo" onclick="copyToClipboard('reminderText')">Copy & Send</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script>
         let currentRenter = {};
@@ -388,17 +327,17 @@
         };
 
         const previousRentersData = {
-            "rohit": { name: "Rohit", room: "A", timeFrame: "Jul 2025 - present", totalRent: 0, address: "-", phone: "+91 -", members: [ { name: "-", address: "-", phone: "+91 -" } ] },
-            "kajal": { name: "Kajal Dondge", room: "A", timeFrame: "Apr 2025 - Jun 2025", totalRent: 12900, address: "-", phone: "+91 -", members: [] },
-            "himanshu": { name: "Himanshu Tiwari", room: "A", timeFrame: "Sep 2023 - Mar  2025", totalRent: 69600, address: "-", phone: "+91 -", members: [{ name: "Sonam Tiwari", address: "-", phone: "+91 -" }] },
+            "Rohit B. Pawar": { name: "Rohit B. Pawar", room: "A", timeFrame: "Jul 2025 - present", totalRent: 0, address: "-", phone: "+91 96237 27612", members: [ { name: "Ankit Pawar", address: "Maharashtra", phone: "+91 95277 26008" } ] },
+            "kajal": { name: "Kajal Dondge", room: "A", timeFrame: "Apr 2025 - Jun 2025", totalRent: 12900, address: "-", phone: "+91 93015 11581", members: [] },
+            "himanshu": { name: "Himanshu Tiwari", room: "A", timeFrame: "Sep 2023 - Mar  2025", totalRent: 69600, address: "-", phone: "+91 62650 66166", members: [{ name: "Sonam Tiwari", address: "-", phone: "+91 -" }] },
             "palkesh": { name: "Plakesh Parihar", room: "A", timeFrame: "Aug 2023 - Aug 2023", totalRent: 3800, address: "-", phone: "+91 -", members: [] },
             "radha": { name: "Radha Chouhan", room: "A", timeFrame: "Jan 2021 - Jun 2022", totalRent: 93500, address: "-", phone: "+91 -", members: [] },
             "ajay" : { name: "Ajay Yadav", room: "A", timeFrame: "Aug 2019 - Aug 2020", totalRent: 33000, address: "-", phone: "+91 -", members: [{ name: "-", address: "-", phone: "+91 -" }] },
 
-            "bucky-barnes": { name: "Bucky Barnes", room: "B", timeFrame: "Feb 2023 - Jan 2024", totalRent: 144000, address: "303 Winter Lane, Noida", phone: "+91 33445 56677", members: [] },
+            "soham": { name: "Soham Parihar", room: "B", timeFrame: "Feb 2023 - present", totalRent: 0, address: "M.P.", phone: "+91 95165 23700", members: [] },
 
-            "natasha-romanoff": { name: "Natasha Romanoff", room: "G", timeFrame: "Mar 2023 - Feb 2024", totalRent: 180000, address: "404 Red Room, Mumbai", phone: "+91 44556 67788", members: [ { name: "Yelena Belova", address: "404 Red Room, Mumbai", phone: "+91 44556 67789" }, { name: "Alexei Shostakov", address: "404 Red Room, Mumbai", phone: "+91 44556 67790" } ] },
-            "clint-barton": { name: "Clint Barton", room: "G", timeFrame: "Mar 2022 - Feb 2023", totalRent: 175000, address: "505 Hawkeye Apt, Pune", phone: "+91 55667 78899", members: [ { name: "Kate Bishop", address: "505 Hawkeye Apt, Pune", phone: "+91 55667 78890" } ] }
+            "ajit": { name: "Ajit Kawde", room: "G", timeFrame: "Aug 2024 - present", totalRent: 0, address: "M.P.", phone: "+91 62614 194662 ", members: [ { name: "Arpit Kumar, address: "M.P.", phone: "+91 73197 60261"}] },
+            "narendra": { name: "Narendra Patil", room: "G", timeFrame: "Jun 2024 - Jul 2024", totalRent: 12000, address: "Maharashtra", phone: "+91 ", members: [ ] }
         };
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -447,9 +386,9 @@
         function getRenterForYear(room, year) {
             const currentYear = new Date().getFullYear();
             if (parseInt(year) >= currentYear) {
-                if (room === 'A') return "John Doe";
+                if (room === 'A') return "Rohit B. Pawar";
                 if (room === 'B') return "Soham Parihar";
-                if (room === 'G') return "Alex Johnson";
+                if (room === 'G') return "Ajit Kawde";
             }
             
             for (const renterId in previousRentersData) {
@@ -747,3 +686,4 @@
     </script>
 </body>
 </html>
+
