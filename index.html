@@ -125,12 +125,12 @@
         <main id="dashboard" class="p-4 sm:p-10 page">
             <h2 class="text-3xl font-bold mb-8 heading-font">Current Renters</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-card rounded-lg p-6" data-renter-name="Rohit B. Pawar" data-renter-address="123 Tech Park, Bangalore" data-aadhaar-link="">
+                <div class="glass-card rounded-lg p-6" data-renter-name="Rohit Balakrishna Pawar" data-renter-address="-" data-aadhaar-link="">
                     <h3 class="text-xl font-bold text-cyan-400 mb-4 heading-font">Room A</h3>
                     <div class="space-y-3 text-gray-300">
-                        <p><strong>Name:</strong> Rohit B. Pawar</p>
+                        <p><strong>Name:</strong> Rohit Balakrishna Pawar</p>
                         <p><strong>Phone:</strong> +91 96237 27612</p>
-                        <p><strong>Address:</strong>  Maharashtra</p>
+                        <p><strong>Address:</strong> At. Post Gonde, Shinnar, Nashik, Maharashtra</p>
                         <!-- <p><strong>Members:</strong> 2</p> -->
                     </div>
                     <div class="mt-6 space-y-2">
@@ -315,13 +315,13 @@
         const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         
         const electricityData = {
-            "2025": {"Room A": [29, 31, 30, 31, 59, 12, 5, 32, 0, 0, 0, 0], "Room B": [48, 56, 54, 41, 55, 60, 64, 64, 0, 0, 0, 0], "Room G": [70, 58, 44, 41, 43, 116, 74, 68, 0, 0, 0, 0]},
+            "2025": {"Room A": [29, 31, 30, 31, 59, 12, 5, 32, 26, 0, 0, 0], "Room B": [48, 56, 54, 41, 55, 60, 64, 64, 50, 0, 0, 0], "Room G": [70, 58, 44, 41, 43, 116, 74, 68, 48, 0, 0, 0]},
             "2024": {"Room A": [14, 24, 16, 15, 41, 46, 30, 12, 20, 10, 14, 16], "Room B": [14, 27, 24, 26, 69, 12, 40, 51, 32, 27, 8, 19], "Room G": [20, 0, 45, 68, 48, 69, 10, 86, 2, 32, 25, 39]},
             "2023": {"Room A": [100, 95, 90, 85, 102, 110, 105, 108, 100, 95, 90, 88], "Room B": [130, 142, 125, 120, 135, 145, 140, 138, 132, 128, 125, 120], "Room G": [88, 82, 88, 78, 92, 98, 95, 90, 85, 80, 78, 75]}
         };
         
         const revenueData = {
-            "2025": {"Room A": [4000, 4000, 4000, 4300, 4300, 4300, 4300, 4500, 0, 0, 0, 0], "Room B": [3900, 3900, 3900, 3900, 3900, 4300, 4300, 4300, 0, 0, 0, 0], "Room G": [6000, 6000, 6000, 6000, 6000, 6000, 6000, 6600, 0, 0, 0, 0]},
+            "2025": {"Room A": [4000, 4000, 4000, 4300, 4300, 4300, 4300, 4500, 4500, 0, 0, 0], "Room B": [3900, 3900, 3900, 3900, 3900, 4300, 4300, 4300, 4300, 0, 0, 0], "Room G": [6000, 6000, 6000, 6000, 6000, 6000, 6000, 6600, 6600, 0, 0, 0]},
             "2024": {"Room A": [3800, 3800, 3800, 3800, 3800, 3800, 3800, 3800, 3800, 3800, 3800, 3800], "Room B": [3900, 3900, 3900, 3900, 3900, 3900, 3900, 3900, 3900, 3900, 3900, 3900], "Room G": [0, 6500, 6500, 6500, 6500, 6000, 6000, 6000, 6000, 6000, 6000, 6000]},
             "2023": {"Room A": [3400, 3600, 3600, 3600, 3600, 0, 0, 3800, 3800, 3800, 3800, 3800], "Room B": [3600, 3600, 3600, 3600, 3600, 3600, 3600, 3600, 3600, 3600, 3700, 3900], "Room G": [6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000, 0, 6000]},
             "2022": {"Room A": [3400, 3400, 3400, 3400, 3400, 3400, 3400, 3400, 3400, 3400, 3400, 3400], "Room B": [3350, 3350, 3350, 3350, 3350, 3350,0,0, 3600, 3600, 3600, 3600], "Room G": [4600, 4600, 4600, 4600, 4600, 4600, 5500, 5500, 5500, 5500, 5500, 5500]},
@@ -332,7 +332,7 @@
         };
 
         const previousRentersData = {
-            "Rohit B. Pawar": { name: "Rohit B. Pawar", room: "A", timeFrame: "Jul 2025 - Aug 2025", totalRent: 0, address: "-", phone: "+91 96237 27612", members: [{ name: "Ankit Pawar", address: "Maharashtra", phone: "+91 95277 26008" } ] },
+            "Rohit Balakrishna Pawar": { name: "Rohit Balakrishna Pawar", room: "A", timeFrame: "Jul 2025 - Aug 2025", totalRent: 0, address: "At Post. Gonde, Shinnar, Nashik, Maharashtra", phone: "+91 96237 27612", members: [{ name: "Ankit Balakrishna Pawar", address: "At Post. Gonde, Shinnar, Nashik, Maharashtra", phone: "+91 95277 26008" } ] },
             "kajal": { name: "Kajal Dondge", room: "A", timeFrame: "Apr 2025 - Jun 2025", totalRent: 12900, address: "-", phone: "+91 93015 11581", members: [] },
             "himanshu": { name: "Himanshu Tiwari", room: "A", timeFrame: "Sep 2023 - Mar  2025", totalRent: 69600, address: "-", phone: "+91 62650 66166", members: [{ name: "Sonam Tiwari", address: "-", phone: "+91 -" }] },
             "palkesh": { name: "Plakesh Parihar", room: "A", timeFrame: "Aug 2023 - Aug 2023", totalRent: 3800, address: "-", phone: "+91 -", members: [] },
@@ -406,7 +406,7 @@
         function getRenterForYear(room, year) {
             const currentYear = new Date().getFullYear();
             if (parseInt(year) >= currentYear) {
-                if (room === 'A') return "Rohit B. Pawar";
+                if (room === 'A') return "Rohit Balakrishna Pawar";
                 if (room === 'B') return "Soham Parihar";
                 if (room === 'G') return "Ajit Kawde";
             }
@@ -706,6 +706,7 @@
     </script>
 </body>
 </html>
+
 
 
 
